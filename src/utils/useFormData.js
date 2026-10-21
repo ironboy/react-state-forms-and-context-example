@@ -24,7 +24,7 @@ export default function useFormData(formValues) {
       };
     },
     // send the form
-    submitForm(url, callback, method = 'POST') {
+    submitForm(url, callback = () => { }, method = 'POST') {
       return async event => {
         // prevent page reload
         event.preventDefault();
