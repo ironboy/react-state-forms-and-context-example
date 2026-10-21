@@ -1,5 +1,21 @@
 {
-  "products": [],
+  "products": [
+    {
+      "name": "Gummianka",
+      "description": "Bra att ha.",
+      "price": 59
+    },
+    {
+      "name": "Jolt Cola",
+      "description": "Essentiell.",
+      "price": 19
+    },
+    {
+      "name": "T-shirt",
+      "description": "Med trycket 'jag kodar bättre än Claude'.",
+      "price": 175
+    }
+  ],
   "webQuestions": [
     {
       "firstName": "Thomas",

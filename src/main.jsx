@@ -12,6 +12,8 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: App,
+    HydrateFallback: () => null,
+    loader: App.loader,
     children: [
       {
         path: '/',
