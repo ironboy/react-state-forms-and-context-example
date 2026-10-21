@@ -1,22 +1,13 @@
-import { useState } from 'react';
+import useFormData from './utils/useFormData';
 
 export default function ContactForm() {
 
-  const [formData, setFormData] = useState({
+  const { formData, formAttr } = useFormData({
     firstName: '',
     lastName: '',
     email: '',
     question: ''
   });
-
-  function formChange(event) {
-    const { name, value } = event.currentTarget;
-    setFormData({ ...formData, [name]: value });
-  }
-
-  function formAttr(name, required = true) {
-    return { name, value: formData[name], onChange: formChange, required };
-  }
 
   return <>
     <form>
