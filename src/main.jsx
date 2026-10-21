@@ -4,9 +4,11 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router";
+import { GlobalProvider } from './utils/GlobalContext.jsx';
 import './index.css';
 import App from './App.jsx';
 import Start from './Start.jsx';
+import ProductPage from './ProductPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         Component: Start
+      },
+      {
+        path: '/produkter',
+        Component: ProductPage
       }
     ]
   },
@@ -25,7 +31,9 @@ const router = createBrowserRouter([
 
 createRoot(document.querySelector('#root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <GlobalProvider>
+      <RouterProvider router={router} />
+    </GlobalProvider>
   </StrictMode>
 );
 

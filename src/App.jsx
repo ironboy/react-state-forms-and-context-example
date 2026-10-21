@@ -1,5 +1,6 @@
-import { use } from "react";
+import { useContext, useEffect } from 'react';
 import { Outlet, useLoaderData } from "react-router";
+import { GlobalContext } from './utils/GlobalContext';
 
 App.loader = async () => {
   return await (await fetch('/api/products')).json();
@@ -8,7 +9,12 @@ App.loader = async () => {
 export default function App() {
 
   const products = useLoaderData();
-  console.log({ products });
+  const { setProp } = useContext(GlobalContext);
+
+  useEffect(() => {
+    // Set products in the global context
+    setProp('products', products);
+  }, []);
 
   return <>
     <header>
