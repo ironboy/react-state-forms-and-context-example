@@ -14,21 +14,18 @@ export default function ContactForm() {
     setFormData({ ...formData, [name]: value });
   }
 
+  function formAttr(name, required = true) {
+    return { name, value: formData[name], onChange: formChange, required };
+  }
+
   return <>
     <form>
-      <input name="firstName" placeholder="Förnamn" type="text" required value={formData.firstName}
-        onChange={formChange} />
-      <input name="lastName" placeholder="Efternamn" type="text" required value={formData.lastName}
-        onChange={formChange}
-      />
-      <input name="email" placeholder="E-mail" type="email" required value={formData.email}
-        onChange={formChange}
-      />
+      <input {...formAttr('firstName')} placeholder="Förnamn" type="text" />
+      <input {...formAttr('lastName')} placeholder="Efternamn" type="text" />
+      <input {...formAttr('email')} placeholder="E-mail" type="email" />
       <label>
         Din fråga:
-        <textarea name="question" required value={formData.question}
-          onChange={formChange}
-        />
+        <textarea {...formAttr('question')} />
       </label>
     </form>
   </>;
