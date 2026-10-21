@@ -1,0 +1,27 @@
+{
+  "products": [],
+  "webQuestions": [
+    {
+      "firstName": "Thomas",
+      "lastName": "Frank",
+      "email": "thomas@nodehill.com",
+      "question": "Hej igen!",
+      "id": "tHZn3dZ0080"
+    },
+    {
+      "firstName": "Thomas",
+      "lastName": "Frank",
+      "email": "thomas@nodehill.com",
+      "question": "Funkar allt nu?",
+      "id": "YG1fxFu4Gk8"
+    },
+    {
+      "firstName": "Thomas",
+      "lastName": "Frank",
+      "email": "thomas@nodehill.com",
+      "question": "Kan man återställa formulär?",
+      "id": "Zx9k7LkyoXk"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
