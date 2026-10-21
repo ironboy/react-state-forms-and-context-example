@@ -14,7 +14,12 @@ export default function useFormData(formValues) {
     // a function you call in each input element like
     // <input {...formAttr('firstName')}/>
     formAttr(name, required = true) {
-      return { name, value: formData[name], onChange: formChange, required };
+      return {
+        name,
+        value: formData[name],
+        onChange: formChange,
+        required
+      };
     }
   };
 }
